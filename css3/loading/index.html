@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>极品飞车loading</title>
+	<style type="text/css">
+		body {
+			margin: 0;
+			height: 100vh;
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			align-items:  center;
+			justify-content: center;
+			background: linear-gradient(midnightblue, black);
+		}
+
+		.loading {
+			width: calc(1em * 7 + .15em *6);
+			height: 1.5em;
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.loading span {
+			width: 1em;
+			background-color: deepskyblue;
+			border-radius: .1em;
+			/* 色块缩放效果 */
+			transform: skewX(-25deg) scale(.1);
+
+			animation: animate .8s infinite alternate;
+			filter:  opacity(0);
+		}
+
+		@keyframes animate {
+			to {
+				filter: opacity(1);
+				 transform: skewX(-25deg) scale(1);
+			}
+		}
+
+		/* 定义变量 */
+		.loading span {animation-delay: calc((var(--n) - 1) * .2s );}
+
+		.loading span:nth-child(1) { --n: 1; }
+		.loading span:nth-child(2) { --n: 2; }
+		.loading span:nth-child(3) { --n: 3; }
+		.loading span:nth-child(4) { --n: 4; }
+		.loading span:nth-child(5) { --n: 5; }
+		.loading span:nth-child(6) { --n: 6; }
+		.loading span:nth-child(7) { --n: 7; }
+
+		
+
+
+
+	</style>
+</head>
+<body>
+	<div class="loading">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+</body>
+</html>
